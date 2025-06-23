@@ -14,7 +14,6 @@ import {
   IconButton,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import Image from "next/image";
 
 interface TeamBuilderProps {
   pokemons: Pokemon[];
@@ -150,12 +149,12 @@ export default function TeamBuilder({
                   )}
                   {selectedPokemons[i] ? (
                     <>
-                      <Image
+                      <img
                         src={selectedPokemons[i].image}
                         alt={selectedPokemons[i].name}
-                        width={48}
-                        height={48}
                         style={{
+                          width: 48,
+                          height: 48,
                           objectFit: "contain",
                           marginBottom: 4,
                         }}
